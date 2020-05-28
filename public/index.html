@@ -11,15 +11,31 @@
         <h1>Loading...</h1>
     </div>
 
-    <form>
+    <form id="rating-num">
         <input type="text" name="movie-title-submit" id="movie-title-submit" placeholder="Enter movie name"><br>
-<!--        <input id="movie-rating-submit" type="number">-->
-        1 <input type="radio" name="rating-button" value="1"><br>
+
+        1 <input type="radio" name="rating-button" value="1" checked><br>
         2 <input type="radio" name="rating-button" value="2"><br>
         3 <input type="radio" name="rating-button" value="3"><br>
         4 <input type="radio" name="rating-button" value="4"><br>
         5 <input type="radio" name="rating-button" value="5"><br>
         <button id="post-movie" type="button">Post Movie</button>
+    </form>
+    <form>
+        <select id="movie-dropdown">
+        </select>
+        <input type="text" name="movie-title-edit" id="movie-title-edit" placeholder="Enter movie name"><br>
+        1 <input type="radio" name="rating-edit" value="1" checked><br>
+        2 <input type="radio" name="rating-edit" value="2"><br>
+        3 <input type="radio" name="rating-edit" value="3"><br>
+        4 <input type="radio" name="rating-edit" value="4"><br>
+        5 <input type="radio" name="rating-edit" value="5"><br>
+        <button id="edit-movie" type="button">Edit</button>
+    </form>
+    <form>
+        <select id="movie-deletion-dropdown">
+        </select>
+        <button id="delete-movie-button" type="button">Delete</button>
     </form>
 
 
