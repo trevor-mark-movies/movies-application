@@ -9,6 +9,14 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": {
+        "0": {},
+        "length": 1
+      },
+      "rating": 5,
+      "id": 3
     }
   ]
 }
