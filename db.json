@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "title": "Star Wars: A new Hope",
+      "title": "Star Wars: Empire Stikes Back",
       "rating": "5",
       "id": 3
     },
@@ -19,6 +19,16 @@
       "title": "The Martian",
       "rating": "5",
       "id": 7
+    },
+    {
+      "title": "Mars Attacks",
+      "rating": "4",
+      "id": 8
+    },
+    {
+      "title": "Pluto Nash",
+      "rating": "2",
+      "id": 9
     }
   ]
 }
