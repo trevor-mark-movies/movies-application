@@ -1,12 +1,125 @@
+* {
+    box-sizing: border-box;
+
+}
+
 html, body {
+    margin: 0;
     height: 100%;
+    background-color: #272121;
+    font-family: "Montserrat", "Work Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto 60% 30% auto;
+    grid-template-rows: 100px 12em auto;
 }
 
 .container {
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translateY(-100%);*/
-    text-align: center;
+    /*text-align: center;*/
+    grid-area: 2 / 2 / 4 / 3;
 }
 
+.top-bar {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    /*height: 100px;*/
+    color: whitesmoke;
+    background-color: darkorange;
+    grid-area: 1 / 1 / 2 / -1;
+}
 
+h1 {
+    margin: 1em;
+    align-items: center;
+}
+
+.movie-listing {
+    /*width: 60%;*/
+    border: 1px solid whitesmoke;
+    padding: .7em;
+    margin: .4em;
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+.toggle-button {
+    background-color: darkorange;
+    color: whitesmoke;
+    padding: 10px 1em;
+    border-radius: 4px;
+    border: 0;
+    transition-duration: 0.2s;
+    font-size: .8em;
+    margin: 1em 1em 0;
+}
+
+.toggle-button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    height: 10em;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+/*#add-form {*/
+/*    display: none;*/
+/*}*/
+/*#edit-form {*/
+/*    display: none;*/
+/*}*/
+/*#delete-form {*/
+/*    display: none;*/
+/*}*/
+
+.hidden-form {
+    display: none;
+}
+
+.user-form {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.user-form>button {
+    background-color: darkorange;
+    color: whitesmoke;
+    padding: 10px 1em;
+    border-radius: 4px;
+    border: 0;
+    /*transition-duration: 0.4s;*/
+    font-size: .8em;
+    margin: 1em 0;
+    width: 8em;
+}
+
+span{
+    color: whitesmoke;
+}
+
+h3 {
+    color: whitesmoke;
+    margin-bottom: .2em;
+}
+
+.bg-title {
+    color: #302626;
+    font-size: 30em;
+    /*color: white;*/
+    z-index: 100;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-100%);
+    text-align: center;
+}
