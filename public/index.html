@@ -7,38 +7,49 @@
 </head>
 <body>
 
+<div class="top-bar"><h1>Watch Movies Online</h1></div>
+<!--<div class="bg-title">WMO</div>-->
+
     <div class="container">
-        <h1>Loading...</h1>
+        <h1 style="color: whitesmoke">Loading...</h1>
     </div>
 
-    <form id="rating-num">
+    <form id="add-form" class="user-form hidden-form"><br>
+        <h3>Title:</h3>
         <input type="text" name="movie-title-submit" id="movie-title-submit" placeholder="Enter movie name"><br>
-
-        1 <input type="radio" name="rating-button" value="1" checked><br>
-        2 <input type="radio" name="rating-button" value="2"><br>
-        3 <input type="radio" name="rating-button" value="3"><br>
-        4 <input type="radio" name="rating-button" value="4"><br>
-        5 <input type="radio" name="rating-button" value="5"><br>
+        <h3>Rating:</h3>
+        <span>1</span> <input type="radio" name="rating-button" value="1" checked><br>
+        <span>2</span> <input type="radio" name="rating-button" value="2"><br>
+        <span>3</span> <input type="radio" name="rating-button" value="3"><br>
+        <span>4</span> <input type="radio" name="rating-button" value="4"><br>
+        <span>5</span> <input type="radio" name="rating-button" value="5"><br>
         <button id="post-movie" type="button">Post Movie</button>
     </form>
-    <form>
+    <form id="edit-form" class="user-form hidden-form">
+        <h3>Select Movie to Edit:</h3>
         <select id="movie-dropdown">
-        </select>
-        <input type="text" name="movie-title-edit" id="movie-title-edit" placeholder="Enter movie name"><br>
-        1 <input type="radio" name="rating-edit" value="1" checked><br>
-        2 <input type="radio" name="rating-edit" value="2"><br>
-        3 <input type="radio" name="rating-edit" value="3"><br>
-        4 <input type="radio" name="rating-edit" value="4"><br>
-        5 <input type="radio" name="rating-edit" value="5"><br>
+        </select><br>
+        <h3>Enter New Title:</h3>
+        <input type="text" name="movie-title-edit" id="movie-title-edit" placeholder="Enter new movie title"><br>
+        <h3>Rating:</h3>
+        <span>1</span> <input type="radio" name="rating-edit" value="1" checked><br>
+        <span>2</span> <input type="radio" name="rating-edit" value="2"><br>
+        <span>3</span> <input type="radio" name="rating-edit" value="3"><br>
+        <span>4</span> <input type="radio" name="rating-edit" value="4"><br>
+        <span>5</span> <input type="radio" name="rating-edit" value="5"><br>
         <button id="edit-movie" type="button">Edit</button>
     </form>
-    <form>
+    <form id="delete-form" class="user-form hidden-form">
+        <h3>Select Movie to Delete:</h3>
         <select id="movie-deletion-dropdown">
-        </select>
+        </select><br>
         <button id="delete-movie-button" type="button">Delete</button>
     </form>
-
-
+    <div id="button-container">
+        <button id="toggle-add" class="toggle-button" type="button">Add Movie</button>
+        <button id="toggle-edit" class="toggle-button" type="button">Edit Movie</button>
+        <button id="toggle-delete" class="toggle-button" type="button">Delete Movie</button>
+    </div>
 
     <script src="./main.js"></script>
 </body>

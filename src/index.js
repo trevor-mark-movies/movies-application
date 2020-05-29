@@ -18,7 +18,10 @@ function renderMovie() {
     movies.forEach(({title, rating, id}, ind) => {
       console.log(ind);
       console.log(`id#${id} - ${title} - rating: ${rating}`);
-      $('.container').append(`<h1>id#${id} - ${title} - rating: ${rating}</h1>`);
+      $('.container').append(`
+        <h1 class="movie-listing">${title} - rating: ${rating}</h1>
+<!--        <hr style="color: whitesmoke">-->
+        `);
       $('#movie-dropdown').append(`<option name="movieId" value="${id}">${title}</option>`);
       $('#movie-deletion-dropdown').append(`<option name="movieId" value="${id}">${title}</option>`);
     });
@@ -32,11 +35,10 @@ function renderMovie() {
 
 $('#post-movie').click(function(e) {
   e.preventDefault();
-  $('.container').html("<h1>Loading...</h1>");
+  $('.container').html("<h1 style='color: whitesmoke'>Loading...</h1>");
   postMovie($('#movie-title-submit').val(), $('input[name="rating-button"]:checked').val());
   renderMovie();
 });
-
 
 $('#edit-movie').click(function() {
   editMovie($('#movie-title-edit').val(), $('input[name="rating-edit"]:checked').val(),parseInt($('#movie-dropdown').val()));
@@ -48,5 +50,20 @@ $('#delete-movie-button').click(function() {
   renderMovie();
 });
 
+$('#toggle-add').click(function() {
+  $('#add-form').toggleClass('hidden-form');
+  $('#edit-form').addClass('hidden-form');
+  $('#delete-form').addClass('hidden-form');
+})
+$('#toggle-edit').click(function() {
+  $('#edit-form').toggleClass('hidden-form');
+  $('#delete-form').addClass('hidden-form');
+  $('#add-form').addClass('hidden-form');
+})
+$('#toggle-delete').click(function() {
+  $('#delete-form').toggleClass('hidden-form');
+  $('#edit-form').addClass('hidden-form');
+  $('#add-form').addClass('hidden-form');
+})
 
 
